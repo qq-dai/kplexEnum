@@ -1,5 +1,14 @@
-# anonymous
-Compile: make 
+# The soruce code of enumerating all maximal k-plexes. 
 
-Example: ./allplexes datas/ -k=2 -q=10 
-where '-k=' is to set the k value for k-plex and '-q' is a size-constraint of the k-plexes to be enumerated.
+Compile: 
+```
+make 
+```
+
+Example: 
+```
+./allplexes datas/ -k=2 -q=10 
+```
+
+- "-k=" is to set the k value for k-plex. 
+- "-q=" is a size-constraint of the k-plexes to be enumerated.
