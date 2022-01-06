@@ -1,4 +1,4 @@
-# The soruce code of enumerating all maximal k-plexes. 
+# The Soruce Code for Enumerating All Maximal k-plexes. 
 
 Compile: 
 ```
