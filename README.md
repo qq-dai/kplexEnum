@@ -7,7 +7,7 @@ make
 
 Example: 
 ```
-./allplexes datas/ -k=2 -q=10 
+./allplexes datas/as-caida2007.txt -k=2 -q=10 
 ```
 
 - "-k=" is to set the k value for k-plex. 
