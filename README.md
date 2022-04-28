@@ -1,13 +1,13 @@
 # The Soruce Code for Enumerating All Maximal k-plexes. 
 
-Compile: 
+# Compile
 ```
 cd /src
 make 
 ```
 Note: this code requires g++ version 5.4 or higher to compile.
 
-Example: 
+# Example 
 ```
 ./kplexes ../datas/as-caida2007.txt -k=2 -q=10 -t=1
 ```
