@@ -5,7 +5,7 @@ Compile:
 cd /src
 make 
 ```
-- Note: this code requires g++ version 5.4 or higher to compile.
+Note: this code requires g++ version 5.4 or higher to compile.
 
 Example: 
 ```
