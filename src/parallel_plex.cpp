@@ -24,6 +24,7 @@ void Parallel_Enum::setParameters(int32 argc, char *argv[]) {
         }
     }
     printf("k=%d, minsize=%d, threads=%d\n", k, minsize, threads);
+    assert(minsize >= 2*k-1);
 }
 
 void Parallel_Enum::initIndexAndFwd(vector<int> &nodeset)
@@ -632,6 +633,7 @@ void Parallel_Enum::penum()
     lcnt_its.resize(threads,0);
     int sn =  min(n, maxcore*md);
     sn = minsize-2*k > 0 ? min(sn, maxcore*md/(minsize-2*k)) : sn;
+    if (2*k < minsize) sn = min(n, maxcore*md/(minsize-2*k)+1);
     #pragma omp parallel reduction(+:computed,iterations,kplexnums)
     {
         //printf("Test: thread_num:%d\n", omp_get_thread_num());
