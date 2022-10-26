@@ -631,8 +631,8 @@ void Parallel_Enum::penum()
     long iterations = 0;
     lcnt_plx.resize(threads,0);
     lcnt_its.resize(threads,0);
-    int sn =  min(n, maxcore*md);
-    if (2*k < minsize) sn = min(n, maxcore*md/(minsize-2*k)+1);
+    int sn =  min(n, maxcore*md+maxcore);
+    if (2*k < minsize) sn = min(n, maxcore*md/(minsize-2*k)+maxcore);
     #pragma omp parallel reduction(+:computed,iterations,kplexnums)
     {
         //printf("Test: thread_num:%d\n", omp_get_thread_num());
