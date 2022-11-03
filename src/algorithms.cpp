@@ -73,13 +73,13 @@ void Algorithm::read_graph(const char *str)
         int32 maxid = 0;
         for (long i = 0; i < m; ++i) {
             char *r = fgets(line, 128, in);
-            if (feof(in)) break;
             sscanf(line, "%d %d", &u, &v);
             if (u >= v) continue;
             assert(u < n && u >= 0);
             assert(v < n && v >= 0);
             tempE.emplace_back(u,v);
             deg[u]++; deg[v]++;
+            if (feof(in)) break;
         }
         fclose(in);
         m = tempE.size();
